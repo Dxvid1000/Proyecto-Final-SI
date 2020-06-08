@@ -8,6 +8,17 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://DavidV:HeZAL0seEaaSKa7H@gruposmusicales-mdtfk.mongodb.net/GM?retryWrites=true&w=majority', {
+//mongodb+srv://DavidV:<password>@gruposmusicales-mdtfk.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+    useNewUrlParser: true
+  }).then(() => {
+    console.log('Conectado a la base de Datos sobre Grupos Musicales')
+  })
+  .catch(err => console.log(err));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
