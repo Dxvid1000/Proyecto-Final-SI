@@ -1,0 +1,28 @@
+{
+  "name": "proyecto-final-si",
+  "version": "1.0.0",
+  "description": "Api rest sobre grupos musicales",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dxvid1000/Proyecto-Final-SI.git"
+  },
+  "keywords": [
+    "SI",
+    "Grupos",
+    "Musicales",
+    "Sistemas",
+    "Informacion",
+    "Proyecto",
+    "Final"
+  ],
+  "author": "Equipo Dinamita",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dxvid1000/Proyecto-Final-SI/issues"
+  },
+  "homepage": "https://github.com/Dxvid1000/Proyecto-Final-SI#readme"
+}
