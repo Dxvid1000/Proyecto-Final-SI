@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagina Principal!</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+</head>
+<body>
+
+  <header>
+    <ul>
+      <li><a href="http://localhost:3000/">Inicio</a></li>
+      <li><a href="http://localhost:3000/web/autos">Contenido</a></li>
+      <li><a href="https://expressdxv.herokuapp.com/">API REST</a></li>            
+    </ul>
+  </header>
+  
+  <div class="welcome">
+    <p><strong>Bienvenidos al proyecto final de SI 2020!</strong></p>
+    <h1>Consumo de API desde otra web</h1>
+
+<form class="buscar" action="/buscar" method="post">
+    <div>
+      <label for="idA">Escribe aqui algun:</label>
+      <input type="text" class="formulario" id="idA"
+              placeholder="Id de un Auto" name="idA">
+    </div>
+    <button type="submit" class="boton">Buscar</button>
+</form>
+</div>
+
+
+</body>
+</html>

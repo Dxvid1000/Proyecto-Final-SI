@@ -1,0 +1,54 @@
+body {
+    background-color: yellow;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    color: rgb(156, 32, 32);
+    font-family: 'Patua One', cursive;
+    font-size: 100px;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+  }
+
+  h2 {
+    color: black;
+    font-family: 'Patua One', cursive;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  h4 {
+    color: black;
+    font-family: 'Patua One', cursive;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+
+  }
+
+  p {
+    margin: 10px auto;
+    color: #333;
+    font-family: 'Sriracha', sans-serif;
+    font-size: 30px;
+    text-align: center;
+
+  }
+  
+  div{
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+
+  }
+  
