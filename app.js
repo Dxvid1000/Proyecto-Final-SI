@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 var mongoose = require('mongoose');
+var Grupo = require('./models/grupos.js');
 
 mongoose.connect('mongodb+srv://DavidV:HeZAL0seEaaSKa7H@gruposmusicales-mdtfk.mongodb.net/GM?retryWrites=true&w=majority', {
 //mongodb+srv://DavidV:<password>@gruposmusicales-mdtfk.mongodb.net/<dbname>?retryWrites=true&w=majority
