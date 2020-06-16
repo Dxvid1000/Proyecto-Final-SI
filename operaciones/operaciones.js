@@ -1,7 +1,7 @@
-const express = require('express');
+var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-const Grupo = mongoose.model('Grupo');
+var Grupo = mongoose.model('Grupo');
 
 router.get('/', (req, res) => {
     res.render("grupo/addupdate", {
