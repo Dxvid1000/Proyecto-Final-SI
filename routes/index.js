@@ -49,21 +49,13 @@ Grupo.find({},(err,data)=>{
 });
 });
 
-router.post('/actualizar',(req,res,next)=>{  
-  console.log(req);
-
+router.post('/actualizar',(req,res,next)=>{
+  //console.log(req);
   Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,data)=>{
     if (err) {
-    res.send("Error al guardar"+err);
+    res.send("Error grupo no encontrado"+err);
   }else{
-    console.log(req.body);
-    var nombreGrupo=req.body.nombreGrupo;
-    var numIntegrantes=req.body.numIntegrantes;
-    var genero=req.body.genero;
-    var nacionalidad=req.body.nacionalidad;
-    var anioCreacion=req.body.anioCreacion;
-    var anioSeparacion=req.body.anioSeparacion;
-      res.render('actualizar', {grupos : data});
+      res.render('actualizar', {grupo : data});
   }
  });
 })
