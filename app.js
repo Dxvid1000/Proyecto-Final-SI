@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 var mongoose = require('mongoose');
-var Grupo = require('./models/grupos.js');
+var operaciones = require('./operaciones/operaciones');
 
 mongoose.connect('mongodb+srv://DavidV:HeZAL0seEaaSKa7H@gruposmusicales-mdtfk.mongodb.net/GM?retryWrites=true&w=majority', {
 //mongodb+srv://DavidV:<password>@gruposmusicales-mdtfk.mongodb.net/<dbname>?retryWrites=true&w=majority
@@ -32,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/views', operaciones);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
