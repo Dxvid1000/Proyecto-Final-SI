@@ -1,0 +1,36 @@
+<body>
+  <div class="container">
+    {{#each actualizar}}
+    <form action="/grabar" method="POST">
+      <div class="form-group">
+        <label for="nombreGrupo">Nombre del grupo:</label>
+          <input type="text" class="form-control" id="nombreGrupo" placeholder={{nombreGrupo}} name="nombreGrupo">
+      </div>
+      <div class="form-group">
+        <label for="numIntegrantes">Numero de integrantes:</label>
+          <input type="text" class="form-control" id="numIntegrantes" placeholder={{numIntegrantes}} name="numIntegrantes">
+      </div>
+      <div class="form-group">
+        <label for="genero">GENERO</label>
+          <input type="text" class="form-control" id="genero" placeholder={{genero}} name="genero">
+      </div>
+
+
+      <div class="form-group">
+        <label for="nacionalidad">NACIONALIDAD</label>
+          <input type="text" class="form-control" id="nacionalidad" placeholder={{nacionalidad}} name="nacionalidad">
+      </div>
+      <div class="form-group">
+        <label for="anioCreacion">AÑO DE CREACION</label>
+          <input type="date" class="form-control" id="anioCreación" placeholder={{anioCreacion}} name="anioCreacion">
+      </div>
+      <div class="form-group">
+        <label for="anioSeparacion">AÑO DE SEPARACION</label>
+          <input type="date" class="form-control" id="anioSeparación" placeholder={{anioSeparacion}} name="anioSeparacion">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-default">Guardar banda</button>
+    </form>
+    {{/each}}
+  </div>
+</body>

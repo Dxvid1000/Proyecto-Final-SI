@@ -33,7 +33,28 @@ router.post('/grabar',(req,res,next)=>{
   );
   grupo.save((err,data)=>{
     if(err) res.send('Error al guardar los datos');
-    else res.render('ver_grupos',data);
+    else res.render('ver_grupo',data);
   })
 });
+router.get('/todos',(req,res,next)=>{
+Grupo.find({},(err,data)=>{
+  if (err) {
+    res.send("Error al guardar"+err);
+  }else{
+      res.render('ver_grupos', {grupos : data});
+  }
+});
+});
+router.get('/actualizar',(req,res,next)=>{
+  console.log(req.body);
+  var nombreGrupo=req.body.nombreGrupo;
+  Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,datos)=>{
+    if (err) {
+    res.send("Error al guardar"+err);
+  }else{
+      res.render('actualizar', {actualizar : data});
+  }
+ });
+})
+
 module.exports = router;

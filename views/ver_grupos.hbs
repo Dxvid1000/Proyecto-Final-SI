@@ -1,27 +1,33 @@
 
   <body>
-    <div class="container">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Nombre del grupo</th>
-            <th>Numero de integrantes</th>
-            <th>Genero</th>
-            <th>Nacionalidad</th>
-            <th>Año de Creación</th>
-            <th>Año de separación</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{nombreGrupo}}</td>
-            <td>{{numIntegrantes}}</td>
-            <td>{{genero}}</td>
-            <td>{{nacionalidad}}</td>
-            <td>{{anioCreacion}}</td>
-            <td>{{anioSeparacion}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <form action="/actualizar" method="POST">
+      <div class="container">
+        {{#each grupos}}
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombre del grupo</th>
+              <th>Numero de integrantes</th>
+              <th>Genero</th>
+              <th>Nacionalidad</th>
+              <th>Año de Creación</th>
+              <th>Año de separación</th>
+              <th>Actualizar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{nombreGrupo}}</td>
+              <td>{{numIntegrantes}}</td>
+              <td>{{genero}}</td>
+              <td>{{nacionalidad}}</td>
+              <td>{{anioCreacion}}</td>
+              <td>{{anioSeparacion}}</td>
+              <td><button type="submit" class="btn btn-default">Actualizar Grupo</button></td>
+            </tr>
+          </tbody>
+        </table>
+         {{/each}}
+      </div>
+    </form>
   </body>
