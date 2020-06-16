@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Grupo = mongoose.model('Grupo');
 
 router.get('/', (req, res) => {
-    res.render("grupo/addupdate", {
+    res.render("grupo/alta_banda", {
         viewTittle: "Agregue nuevo grupo"
     });
 });
@@ -30,7 +30,7 @@ function insertGrupo(req, res){
         else {
             if (err.name == 'ValidationError') {
                 handleValidationError(err, req.body);
-                res.render("grupo/addupdate", {
+                res.render("grupo/alta_grupo", {
                     viewTitle: "Agregue nuevo grupo",
                     grupo: req.body
             });
@@ -43,11 +43,11 @@ function insertGrupo(req, res){
 
 function updateGrupo(req, res) {
     Grupo.updateOne({_id: req.body._id}, req.body, {new: true}, (err, doc) => {
-        if(!err) {res.redirect('grupo/lista');}
+        if(!err) {res.redirect('grupo/listar');}
         else{
             if(err.name == 'ValidationError'){
                 handleValidationError(err, req.body);
-                res.render('grupo/addupdate',{
+                res.render('grupo/alta_grupo',{
                     viewTitle: "Actualizar Grupo",
                     grupo: req.body
                 });
@@ -63,7 +63,7 @@ function updateGrupo(req, res) {
 router.get('/list', (req, res) => {
     Grupo.find((err, docs) => {
         if (!err) {
-            res.render("grupo/lista", {
+            res.render("grupo/listar", {
                 grouplist: docs
             });
         }
@@ -91,7 +91,7 @@ function handleValidationError(err, body) {
 router.get('/:id', (req, res) => {
     Grupo.findById(req.params.id, (err, doc) => {
         if (!err) {
-            res.render("grupo/addupdate", {
+            res.render("grupo/listar", {
                 viewTitle: "Grupo Encontrado",
                 employee: doc
             });
@@ -102,7 +102,7 @@ router.get('/:id', (req, res) => {
 router.get('/delete/:id', (req, res) => {
     Employee.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
-            res.redirect('/grupo/lista');
+            res.redirect('/grupo/listar');
         }
         else {
             console.log('Error al eliminar grupo:' + err);
