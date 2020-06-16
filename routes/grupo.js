@@ -12,10 +12,7 @@ router.get('/',(req,res,next)=>{
   });
   
   router.get('/:grupoId', (req, res, next)=>{
-    console.log(req);
-
     Grupo.findOne({'_id':req.params.grupoId},(err,datos)=>{
-      
       if(datos == null){
         res.status(404).json({"mensaje":"No encontrado"});
       }else{
