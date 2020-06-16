@@ -27,7 +27,6 @@ router.get('/baja',(req,res,next)=>{
   });
 
 router.post('/grabar',(req,res,next)=>{
-  console.log(req.body);
   var nombreGrupo=req.body.nombreGrupo;
   var numIntegrantes=req.body.numIntegrantes;
   var genero=req.body.genero;
@@ -89,13 +88,50 @@ router.post('/borrar',(req,res,next)=>{
       anioSeparacion: anioSeparacion
     }
   );
-  Grupo.findOneAndDelete({nombreGrupo: req.body.nombreGrupo },function(err,data){
+  Grupo.findOneAndRemove({'nombreGrupo': nombreGrupo },function(err,data){
     if (err) {
-      console.log(err);
+      res.send(err);
     }
-    console.log(data);
+    res.render('ver_grupo',grupo)
   });
 });
+
+
+router.post('/nuevosDatos',(req,res,next)=>{
+  var nombreGrupo=req.body.nombreGrupo;
+  var numIntegrantes=req.body.numIntegrantes;
+  var genero=req.body.genero;
+  var nacionalidad=req.body.nacionalidad;
+  var anioCreacion=req.body.anioCreacion;
+  var anioSeparacion=req.body.anioSeparacion;
+  var grupo = Grupo(
+  {
+  nombreGrupo: nombreGrupo,
+  numIntegrantes: numIntegrantes,
+  genero: genero,
+  nacionalidad: nacionalidad,
+  anioCreacion: anioCreacion,
+  anioSeparacion: anioSeparacion
+  }
+  );
+  
+  Grupo.findOneAndUpdate({'nombreGrupo':nombreGrupo},{
+  'nombreGrupo': nombreGrupo,
+  'numIntegrantes': numIntegrantes,
+  'genero': genero,
+  'nacionalidad': nacionalidad,
+  'anioCreacion': anioCreacion,
+  'anioSeparacion': anioSeparacion
+  
+  },(err,data)=>{
+  if (err) {
+  res.send("Error al guardar"+err);
+  }else{
+  res.render('ver_grupo',grupo)
+  }
+  });
+  });
+  
 
 
 module.exports = router;
