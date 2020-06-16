@@ -1,40 +1,51 @@
-<html>
-<html>
-	<head>
-		<title>Formulario De Alta</title>
-		<link rel="stylesheet" type="text/css" href="estilo.css">
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 	<body>
-		<div class="form">
+		<div class="container">
 			<form action="#" method="POST">
-				<p>NOMBRE DE LA BANDA</p>
-				<label for="nombreGrupo">Nombre del grupo</label>
+				<div class="form-group">
+      		<label for="nombreGrupo">Nombre del grupo:</label>
+         		<input type="text" class="form-control" id="nombreGrupo" placeholder="nombre del grupo" name="nombreGrupo">
+        </div>
+				<div class="form-group">
+      		<label for="numIntegrantes">Numero de integrantes:</label>
+         		<input type="text" class="form-control" id="numIntegrantes" placeholder="Ingrese el numero de integrantes de la banda" name="numIntegrantes">
+        </div>
+				<div class="form-group">
+      		<label for="genero">GENERO</label>
+         		<input type="text" class="form-control" id="genero" placeholder="Ingrese el genero de la banda" name="genero">
+        </div>
+				<div class="form-group">
+					<label for="genero">GENERO</label>
+						<input type="text" class="form-control" id="genero" placeholder="Ingrese el genero de la banda" name="genero">
+				</div>
+				<div class="form-group">
+					<label for="genero">GENERO</label>
+						<input type="text" class="form-control" id="genero" placeholder="Ingrese el genero de la banda" name="genero">
+				</div>
+				<div class="form-group">
+					<label for="nacionalidad">NACIONALIDAD</label>
+						<input type="text" class="form-control" id="nacionalidad" placeholder="Ingrese la nacionalidad de la banda" name="nacionalidad">
+				</div>
+				<div class="form-group">
+					<label for="añoCreacion">AÑO DE CREACION</label>
+						<input type="text" class="form-control" id="añoCreacion" placeholder="Ingrese el año de creacion de la banda" name="añoCreacion">
+				</div>
+				<div class="form-group">
+					<label for="añoSeparacion">AÑO DE SEPARACION</label>
+						<input type="text" class="form-control" id="añoSeparacion" placeholder="Ingrese el año de separacion de la banda" name="añoSeparacion">
+				</div>
 				<br>
-				<input type="text" name="nombreGrupo" placeholder="coloque nombre del grupo" required>
-				<p>NUMERO DE INTEGRANTES</p>
-				<label for="numIntegrantes">Numero de integrantes</label>
 				<br>
-				<input type="text" name="numIntegrantes" placeholder="Ingrese el numero de integrantes de la banda" required>
-				<p>GENERO</p>
-				<label for="genero">Genero</label>
-				<br>
-				<input type="text" name="genero" placeholder="Ingrese el genero de la banda" required>
-				<p>NACIONALIDAD</p>
-				<label for="nacionalidad">Nacionalidad</label>
-				<br>
-				<input type="text" name="nacionalidad" placeholder="Ingrese la nacionalidad de la banda" required>
-                <p>AÑO DE CREACION</p>
-				<label for="añoCreacion">Año de creacion</label>
-				<br>
-				<input type="text" name="añoCreacion" placeholder="Ingrese el año de creacion de la banda" required>
-                <p>AÑO DE SEPARACION</p>
-				<label for="añoSeparacion">Año de separacion</label>
-				<br>
-				<input type="text" name="añoSeparacion" placeholder="Ingrese el año de separacion de la banda" required>
-				
-				<br>
-				<br>
-				<input type="submit" value="Registrar Banda">
+				<button type="submit" class="btn btn-default">Guardar banda</button>
 			</form>
 		</div>
 	</body>
