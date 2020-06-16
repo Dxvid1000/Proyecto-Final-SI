@@ -47,12 +47,17 @@ Grupo.find({},(err,data)=>{
 });
 router.get('/actualizar',(req,res,next)=>{
   console.log(req.body);
-  var nombreGrupo=req.body.nombreGrupo;
   Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,datos)=>{
     if (err) {
     res.send("Error al guardar"+err);
   }else{
-      res.render('actualizar', {actualizar : data});
+    var nombreGrupo=req.body.nombreGrupo;
+    var numIntegrantes=req.body.numIntegrantes;
+    var genero=req.body.genero;
+    var nacionalidad=req.body.nacionalidad;
+    var anioCreacion=req.body.anioCreacion;
+    var anioSeparacion=req.body.anioSeparacion;
+      res.render('actualizar', {grupos : data});
   }
  });
 })

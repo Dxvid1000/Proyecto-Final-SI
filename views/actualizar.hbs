@@ -1,7 +1,7 @@
 <body>
   <div class="container">
     {{#each actualizar}}
-    <form action="/grabar" method="POST">
+    <form action="/actualizar" method="GET">
       <div class="form-group">
         <label for="nombreGrupo">Nombre del grupo:</label>
           <input type="text" class="form-control" id="nombreGrupo" placeholder={{nombreGrupo}} name="nombreGrupo">
