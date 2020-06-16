@@ -8,11 +8,13 @@ var Grupo = require('../models/grupos');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { });
 });
+
 router.get('/alta',(req,res,next)=>{
   res.render('alta_banda',{});
 });
+
 router.post('/grabar',(req,res,next)=>{
   console.log(req.body);
   var nombreGrupo=req.body.nombreGrupo;
@@ -36,6 +38,7 @@ router.post('/grabar',(req,res,next)=>{
     else res.render('ver_grupo',data);
   })
 });
+
 router.get('/todos',(req,res,next)=>{
 Grupo.find({},(err,data)=>{
   if (err) {
@@ -45,12 +48,15 @@ Grupo.find({},(err,data)=>{
   }
 });
 });
-router.get('/actualizar',(req,res,next)=>{
-  console.log(req.body);
-  Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,datos)=>{
+
+router.post('/actualizar',(req,res,next)=>{  
+  console.log(req);
+
+  Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,data)=>{
     if (err) {
     res.send("Error al guardar"+err);
   }else{
+    console.log(req.body);
     var nombreGrupo=req.body.nombreGrupo;
     var numIntegrantes=req.body.numIntegrantes;
     var genero=req.body.genero;
