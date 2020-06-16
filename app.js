@@ -12,7 +12,8 @@ var mongoose = require('mongoose');
 //////ERROR//////////var operaciones = require('./operaciones/operaciones');
 var grupo = require('./models/grupos');
 
-mongoose.connect('mongodb+srv://DavidV:HeZAL0seEaaSKa7H@gruposmusicales-mdtfk.mongodb.net/GM?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://usuario1:ikvavNSuqo6ll2JS@cluster0-3pwhx.mongodb.net/GM?retryWrites=true&w=majority', {
+//mongoose.connect('mongodb+srv://DavidV:HeZAL0seEaaSKa7H@gruposmusicales-mdtfk.mongodb.net/GM?retryWrites=true&w=majority', {
 //mongodb+srv://DavidV:<password>@gruposmusicales-mdtfk.mongodb.net/<dbname>?retryWrites=true&w=majority
 
     useNewUrlParser: true

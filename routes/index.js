@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+
+
 var mongoose = require('mongoose');
 var Grupo = require('../models/grupos');
 
@@ -17,21 +19,21 @@ router.post('/grabar',(req,res,next)=>{
   var numIntegrantes=req.body.numIntegrantes;
   var genero=req.body.genero;
   var nacionalidad=req.body.nacionalidad;
-  var añocCreación=req.body.añoCreación;
-  var añoSeparación=req.body.añoSeparación;
+  var anioCreacion=req.body.anioCreacion;
+  var anioSeparacion=req.body.anioSeparacion;
   var grupo = Grupo(
     {
       nombreGrupo: nombreGrupo,
       numIntegrantes: numIntegrantes,
       genero: genero,
       nacionalidad: nacionalidad,
-      añoCreación: añoCreación,
-      añoSeparación: añoSeparación
+      anioCreacion: anioCreacion,
+      anioSeparacion: anioSeparacion
     }
   );
   grupo.save((err,data)=>{
     if(err) res.send('Error al guardar los datos');
-    else res.render('alta ok',data);
+    else res.render('ver_grupos',data);
   })
 });
 module.exports = router;

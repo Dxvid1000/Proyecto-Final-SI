@@ -6,8 +6,8 @@ var GruposSchema = Schema({
     numIntegrantes: String,
     genero: String,
     nacionalidad: String,
-    añoCreación: String,
-    añoSeparación: String
+    anioCreacion: String,
+    anioSeparacion: String
 
 });
 
