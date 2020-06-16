@@ -8,15 +8,17 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/solo.css">
 </head>
 <body>
-  <h1>Auto</h1>
-<h2>ID = {{datos._id}}</h2> 
+  <h1>Grupo Buscado</h1>
 <div class="row">
   <div class="col col-3 m-5">
     <div class="card" style="width:400px">
-      <h4 class="card-title">Marca: {{datos.marca}}</h4>
-      <img class="card-img-top" src="{{datos.imagen}}" alt="Card image" style="width:100%">
-      <div class="card-body">
-      <p class="card-text"> Submarca: {{datos.submarca}}</p>
+      <h4 class="card-title">{{datos.nombreGrupo}}</h4>
+      <p class="card-text">ID: {{datos._id}}</p> 
+      <p class="card-text">Num. Integrantes: {{datos.numIntegrantes}}</p>
+      <p class="card-text">Genero: {{datos.genero}}</p>
+      <p class="card-text">Nacionalidad: {{datos.nacionalidad}}</p>
+      <p class="card-text">Fecha de Creacion: {{datos.anioCreacion}}</p>
+      <p class="card-text">Fecha de Separacion: {{datos.anioSeparacion}}</p>
       </div>
     </div>
   </div>

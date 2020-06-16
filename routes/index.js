@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/buscar', (req, res, next) => {
   console.log(req.body.idA);
-  request('https://expressdxv.herokuapp.com/autos/'+req.body.idA, (error, response, body) =>{       
+  request('https://proyectofinalsi.herokuapp.com/grupo/'+req.body.idA, (error, response, body) =>{       
     res.render('solo',{'datos':JSON.parse(body)});
 });
 });

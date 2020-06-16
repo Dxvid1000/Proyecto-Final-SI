@@ -1,5 +1,5 @@
 body {
-    background-color: yellow;
+    background-color: white;
     margin: 0 auto;
   }
   
@@ -12,20 +12,9 @@ body {
     position: relative;
     text-align: center;
   }
-
-  h2 {
-    color: black;
-    font-family: 'Patua One', cursive;
-    font-size: 30px;
-    font-weight: 300;
-    text-transform: uppercase;
-    position: relative;
-    text-align: center;
-    margin: 50px auto;
-  }
   
   h4 {
-    color: black;
+    color: blue;
     font-family: 'Patua One', cursive;
     font-size: 30px;
     font-weight: 300;

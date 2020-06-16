@@ -1,5 +1,5 @@
 body {
-    background-color: turquoise;
+    background-color: white;
     margin: 0 auto;
   }
   
@@ -14,7 +14,7 @@ body {
   }
   
   h4 {
-    color: black;
+    color: blue;
     font-family: 'Patua One', cursive;
     font-size: 30px;
     font-weight: 300;
@@ -26,7 +26,7 @@ body {
   }
 
   p {
-    margin: 10px auto;
+    margin: 5px auto;
     color: #333;
     font-family: 'Sriracha', sans-serif;
     font-size: 30px;
@@ -37,7 +37,6 @@ body {
   div{
     text-align: center;
     position: relative;
-    margin: 50px auto;
-
+    margin: 80px auto;    
   }
   

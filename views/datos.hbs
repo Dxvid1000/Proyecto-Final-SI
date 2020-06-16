@@ -9,15 +9,18 @@
 </head>
 <body>
 
-<h1>Todos los Autos</h1>
+<h1>Todos los Grupos Musicales</h1>
 <div class="row">
   {{#each data}}
   <div class="col col-3 m-5">
     <div class="card" style="width:400px">
-      <h4 class="card-title">Marca: {{marca}}</h4>
-      <img class="card-img-top" src="{{imagen}}" alt="Card image" style="width:100%">
-      <div class="card-body">
-      <p class="card-text">Submarca: {{submarca}}</p>
+      <h4 class="card-title">{{nombreGrupo}}</h4>
+      <p class="card-text">ID: {{_id}}</p> 
+      <p class="card-text">Num. Integrantes: {{numIntegrantes}}</p>
+      <p class="card-text">Genero: {{genero}}</p>
+      <p class="card-text">Nacionalidad: {{nacionalidad}}</p>
+      <p class="card-text">Fecha de Creacion: {{anioCreacion}}</p>
+      <p class="card-text">Fecha de Separacion: {{anioSeparacion}}</p>
       </div>
     </div>
   </div>
