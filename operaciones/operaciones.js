@@ -43,7 +43,7 @@ function insertGrupo(req, res){
 
 function updateGrupo(req, res) {
     Grupo.updateOne({_id: req.body._id}, req.body, {new: true}, (err, doc) => {
-        if(!err) {res.redirect('grupo/list');}
+        if(!err) {res.redirect('grupo/lista');}
         else{
             if(err.name == 'ValidationError'){
                 handleValidationError(err, req.body);
