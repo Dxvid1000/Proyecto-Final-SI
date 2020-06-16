@@ -3,11 +3,11 @@ var Schema = mongoose.Schema;
 
 var GruposSchema = Schema({
     nombreGrupo: String,
-    numIntegrantes: Number,
+    numIntegrantes: String,
     genero: String,
     nacionalidad: String,
-    añoCreación: Number,
-    añoSeparación: Number
+    añoCreación: String,
+    añoSeparación: String
 
 });
 
