@@ -86,7 +86,7 @@ router.post('/borrar',(req,res,next)=>{
       anioSeparacion: anioSeparacion
     }
   );
-  Grupo.findOneAndRemove({'nombreGrupo': nombreGrupo },function(err,data){
+  Grupo.findOneAndDelete({'nombreGrupo': nombreGrupo },function(err,data){
     if (err) {
       res.send(err);
     }
