@@ -13,17 +13,6 @@ router.get('/alta',(req,res,next)=>{
   res.render('alta_banda',{});
 });
 
-
-router.get('/baja',(req,res,next)=>{
-  Grupo.find({},(err,data)=>{
-    if (err) {
-      res.send("Error al guardar"+err);
-    }else{
-        res.render('borrar_grupos', {grupos : data});
-    }
-  });
-  });
-
 router.post('/grabar',(req,res,next)=>{
   var nombreGrupo=req.body.nombreGrupo;
   var numIntegrantes=req.body.numIntegrantes;
@@ -68,29 +57,36 @@ router.post('/actualizar',(req,res,next)=>{
  });
 })
 
+router.post('/elemB',(req,res,next)=>{
+  //console.log(req);
+  Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,data)=>{
+    if (err) {
+    res.send("Error grupo no encontrado"+err);
+  }else{
+      res.render('elemB', {grupo : data});
+  }
+ });
+})
 
-router.post('/borrar',(req,res,next)=>{
-  var nombreGrupo=req.body.nombreGrupo;
-  var numIntegrantes=req.body.numIntegrantes;
-  var genero=req.body.genero;
-  var nacionalidad=req.body.nacionalidad;
-  var anioCreacion=req.body.anioCreacion;
-  var anioSeparacion=req.body.anioSeparacion;
-  var grupo = Grupo(
-    {
-      nombreGrupo: nombreGrupo,
-      numIntegrantes: numIntegrantes,
-      genero: genero,
-      nacionalidad: nacionalidad,
-      anioCreacion: anioCreacion,
-      anioSeparacion: anioSeparacion
+
+router.get('/borrar',(req,res,next)=>{
+  Grupo.find({},(err,data)=>{
+    if (err) {
+      res.send("Error al seleccionar"+err);
+    }else{
+        res.render('grupos', {grupos : data});
     }
-  );
+  });
+})
+
+/router.post('/borrado',(req,res,next)=>{
+  var nombreGrupo=req.body.nombreGrupo
+  
   Grupo.findOneAndDelete({'nombreGrupo': nombreGrupo },function(err,data){
     if (err) {
       res.send(err);
     }
-    res.render('ver_grupo',grupo)
+    res.render('ver_grupo',data)
   });
 });
 
