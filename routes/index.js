@@ -47,7 +47,6 @@ Grupo.find({},(err,data)=>{
 });
 
 router.post('/actualizar',(req,res,next)=>{
-  //console.log(req);
   Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,data)=>{
     if (err) {
     res.send("Error grupo no encontrado"+err);
@@ -58,7 +57,6 @@ router.post('/actualizar',(req,res,next)=>{
 })
 
 router.post('/elemB',(req,res,next)=>{
-  //console.log(req);
   Grupo.findOne({'nombreGrupo':req.params.nombreGrupo},(err,data)=>{
     if (err) {
     res.send("Error grupo no encontrado"+err);
